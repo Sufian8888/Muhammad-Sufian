@@ -82,7 +82,7 @@ export default function Hero() {
                 alt="Muhammad Sufian"
                 width={200}
                 height={200}
-                className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-lg object-cover border-4 hover:scale-110 cursor-none transition duration-300 shadow-[0px_0px_40px_rgba(0,0,255,0.7)]"
+                className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-lg object-cover border-4 hover:scale-110 cursor-pointer transition duration-300 shadow-[0px_0px_40px_rgba(0,0,255,0.7)]"
                 onError={(e) => {
                   e.currentTarget.src =
                     "https://via.placeholder.com/200/374151/FFFFFF?text=Profile";

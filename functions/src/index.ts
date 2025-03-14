@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const cors = require("cors")({ origin: true });
-import { Request, Response } from "express";
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -13,7 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Cloud Function to send an email
-exports.sendMessage = functions.https.onRequest((req: Request, res: Response) => {
+exports.sendMessage = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
     if (req.method !== "POST") {
       return res.status(405).send("Method Not Allowed");
@@ -33,7 +32,7 @@ exports.sendMessage = functions.https.onRequest((req: Request, res: Response) =>
       text: `Name: ${name}\nEmail: ${email}\nContact No: ${contact}\nMessage: ${message}`,
     };
 
-    transporter.sendMail(mailOptions, (error: Error | null, info: any) => {
+    transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.error("Error sending email:", error);
         return res.status(500).send(error.toString());

@@ -64,7 +64,7 @@ export default function TechStack() {
                     alt={tech.name}
                     width={48}
                     height={48}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain rounded-full cursor-pointer hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{tech.name}</h3>

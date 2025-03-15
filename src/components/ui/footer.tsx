@@ -1,7 +1,20 @@
 "use client";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-
+const social = [
+  {
+    link: "https://github.com/Sufian8888",
+    icon: FaGithub,
+  },
+  {
+    link: "https://www.instagram.com/sufian8888/",
+    icon: FaInstagram,
+  },
+  {
+    link: "https://www.linkedin.com/in/muhammad-sufian-9309b8296",
+    icon: FaLinkedin,
+  },
+];
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -18,12 +31,15 @@ export default function Footer() {
           Get in touch
         </Link>
 
-        <div className="flex justify-center gap-6  mt-8">
-          {[FaInstagram, FaGithub, FaLinkedin].map((Icon, index) => (
-            <Icon
-              key={index}
-              className="w-10 h-10  p-2 border hover:scale-125 border-gray-600 rounded-full opacity-50 hover:opacity-100 transition cursor-pointer"
-            />
+        <div className="flex justify-center gap-6 mt-8">
+          {social.map((id) => (
+            <div
+              key={id.icon.toString()} // Ensure a unique key
+              onClick={() => window.open(id.link, "_blank")} // Open in a new tab
+              className="w-10 h-10 p-2 border hover:scale-125 border-gray-600 rounded-full opacity-50 hover:opacity-100 transition cursor-pointer"
+            >
+              <id.icon size={24} />
+            </div>
           ))}
         </div>
 

@@ -3,44 +3,44 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useMemo } from "react";
-
+import Image from "next/image";
 // Project data - replace with your own
 const projects = [
   {
-    id: 1,
-    title: "BGTV",
-    category: "Streaming",
-    image: "/images/project-placeholder.svg",
-  },
-  {
-    id: 2,
-    title: "Raccountants",
-    category: "Accounting",
-    image: "/images/project-placeholder.svg",
-  },
-  {
-    id: 3,
-    title: "Trend Wave",
+    id: "https://github.com/Sufian8888/Amazon-Clone",
+    title: "Amazon Clone",
     category: "E-commerce",
-    image: "/images/project-placeholder.svg",
+    image: "/images/Amazon-Ecommerce.jpg",
   },
   {
-    id: 4,
-    title: "Edify College of IT",
+    id: "https://github.com/Sufian8888/PasswordGenerator",
+    title: "Password Generator",
+    category: "Accounting",
+    image: "/images/Password.png",
+  },
+  {
+    id: "https://github.com/Sufian8888/WeatherApp",
+    title: "Weather App",
+    category: "Weather",
+    image: "/images/Weather App.jpg",
+  },
+  {
+    id: "https://github.com/Sufian8888/Todolist",
+    title: "Todo List",
     category: "Educational",
-    image: "/images/project-placeholder.svg",
+    image: "/images/TO DO .png",
   },
   {
     id: 5,
-    title: "Swift SBF",
+    title: "Genral Blogging Webiste",
     category: "Business",
     image: "/images/project-placeholder.svg",
   },
   {
-    id: 6,
-    title: "Edify Group of Companies",
-    category: "Educational",
-    image: "/images/project-placeholder.svg",
+    id: "https://github.com/JokKing17/NextJsEcommerceProject",
+    title: "Clothing Website",
+    category: "E-commerce",
+    image: "/images/Clothing.jpg",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -125,9 +125,15 @@ export default function Projects() {
               viewport={{ once: true }}
               className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 group hover:shadow-lg transition-all duration-300"
             >
-              <div className="aspect-[4/3] relative bg-gray-100 dark:bg-gray-800">
+              <div className="aspect-[6/3]  relative bg-gray-100 dark:bg-gray-800">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  Project Image
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
               <div className="p-6">
@@ -136,10 +142,10 @@ export default function Projects() {
                 </p>
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                 <Link
-                  href={`/projects/${project.id}`}
-                  className="text-gray-900 dark:text-white font-medium inline-block mt-2 transition-colors hover:text-gray-900 dark:hover:text-gray-300"
+                  href={`${project.id}`}
+                  className="text-gray-900 dark:text-white font-medium flex justify-center items-center bg-blue-600 p-2 rounded hover:scale-105  mt-2 transition-colors hover:text-gray-900 dark:hover:text-gray-300"
                 >
-                  View Project
+                  View Code on Github
                 </Link>
               </div>
             </motion.div>

@@ -41,7 +41,7 @@ export default function Hero() {
       )}
 
       <div className="max-w-4xl mx-auto relative">
-        <div className="flex items-center justify-between mb-16">
+        <div className="flex items-center justify-between pl-10 pr-10 mb-16">
           {/* Availability Section */}
 
           <div className="flex justify-center animate-pulse items-center gap-3 text-gray-300 text-sm mb-4">
@@ -110,10 +110,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-3xl md:text-4xl font-extrabold leading-tight relative inline-block"
+            className="text-3xl md:text-4xl font-extrabold leading-tight relative "
           >
             Hi there! I&apos;m <br className="block md:hidden" />
-            <span className="relative inline-block animate-pulse">
+            <span className="relative inline-block mt-4 animate-pulse">
               Muhammad Sufian
             </span>
           </motion.h1>

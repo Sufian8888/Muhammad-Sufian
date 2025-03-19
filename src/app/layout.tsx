@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import ClientLayout from "@/components/layouts/client-layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,36 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Sufian",
-  description: "Software Engineer specializing in web development with React, Next.js, TypeScript and more",
+  title: "Muhammad Sufian | Software Engineer",
+  description:
+    "Software Engineer specializing in web development with React, Next.js, TypeScript and more",
   icons: {
     icon: [
       {
-        url: '/technology.png',
-        href: '/technology.png',
-      }
-    ]
-  }
+        url: "/technology.png",
+        href: "/technology.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-950 text-white min-h-screen`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          storageKey="portfolio-theme"
-        >
-          {children}
-        </ThemeProvider>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

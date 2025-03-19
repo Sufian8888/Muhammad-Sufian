@@ -15,6 +15,11 @@ const technologies = [
     icon: "/css.webp",
   },
   {
+    name: "Javascript",
+    category: "Language",
+    icon: "/js.webp",
+  },
+  {
     name: "Next JS",
     category: "Frontend Framework",
     icon: "/nextjs.png",

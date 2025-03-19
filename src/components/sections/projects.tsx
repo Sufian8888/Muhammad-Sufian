@@ -96,7 +96,7 @@ export default function Projects() {
 
       <div className="max-w-4xl mx-auto relative">
         <h2 className="text-4xl font-bold mb-6 text-center">
-          Case Studies and Explorations
+          Projects and Explorations
         </h2>
 
         <div className="flex justify-center gap-4 mb-12 flex-wrap">

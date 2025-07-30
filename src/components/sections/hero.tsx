@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="pt-20 md:pt-14 pb-12 relative overflow-hidden bg-[#0d0f17] text-white"
+      className="pt-20 md:pt-14 pb-12 relative overflow-hidden bg-gradient-to-b from-[#0d0f17] to-[#151822] text-white"
     >
       {/* Animated Background */}
 
@@ -110,7 +110,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-3xl md:text-4xl font-extrabold leading-tight relative "
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight relative bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-white animate-gradient-x"
           >
             Hi there! I&apos;m <br className="block md:hidden" />
             <span className="relative inline-block mt-4 animate-pulse">

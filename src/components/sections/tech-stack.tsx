@@ -69,7 +69,7 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden p-6 group hover:shadow-lg transition-all duration-300 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
+              className="relative border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden p-6 group hover:shadow-lg hover:scale-105 hover:-translate-y-1 transition-all duration-300 bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
             >
               <div className="relative z-10 flex flex-col">
                 <div className="w-12 h-12 mb-4">

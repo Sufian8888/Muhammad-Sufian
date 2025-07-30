@@ -123,7 +123,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 group hover:shadow-lg transition-all duration-300"
+              className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 group hover:shadow-2xl hover:scale-105 transform transition-all duration-500 ease-out"
             >
               <div className="aspect-[6/3]  relative bg-gray-100 dark:bg-gray-800">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-400">
@@ -132,7 +132,7 @@ export default function Projects() {
                     alt={project.title}
                     width={500}
                     height={500}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500 ease-out"
                   />
                 </div>
               </div>
